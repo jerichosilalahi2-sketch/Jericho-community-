@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7fbff"><title>Jericho Community — Belajar Bersama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="sticker s1">✏️</div><div class="sticker s2">📚</div><div class="sticker s3">🧠</div><div class="sticker s4">🪐</div>
+  <header class="topbar"><button class="brand" id="brandHome" aria-label="Kembali ke beranda"><span class="brand-mark">JC</span><span>JERICHO <b>COMMUNITY</b></span></button><div class="top-actions"><span class="online-dot"></span><span class="small-status">Ruang belajar kamu</span><button class="icon-btn" id="themeBtn" title="Mode gelap">☾</button></div></header>
+  <main>
+    <section id="homeView" class="view active">
+      <div class="hero"><div class="eyebrow"><span>✦</span> RUANG BELAJAR DIGITAL</div><h1>SELAMAT DATANG DI<br><span>JERICHO COMMUNITY</span></h1><p class="hero-desc">Tujuan web ini dibuat untuk membantu proses belajar siswa dan siswi Indonesia.</p><div class="hero-art"><div class="art-book">📖</div><div class="art-orbit">✦</div><div class="art-cap">🎓</div><div class="art-pencil">✏️</div><div class="art-note">Belajar itu seru!</div></div></div>
+      <div class="section-heading"><div><span class="eyebrow">MULAI DARI SINI</span><h2>Apa yang ingin kamu lakukan?</h2></div><span class="mini-pill">4 fitur utama</span></div>
+      <div class="menu-grid">
+        <button class="menu-card card-notes" data-go="notes"><span class="card-icon">📝</span><span class="card-label">Tambahkan Catatan</span><span class="card-sub">Simpan ide dan materi penting</span><span class="card-arrow">↗</span></button>
+        <button class="menu-card card-learn" data-go="learn"><span class="card-icon">📚</span><span class="card-label">Belajar</span><span class="card-sub">Pahami materi bersama AI</span><span class="card-arrow">↗</span></button>
+        <button class="menu-card card-quiz" data-go="quiz"><span class="card-icon">🧩</span><span class="card-label">Latihan Soal</span><span class="card-sub">Uji kemampuanmu</span><span class="card-arrow">↗</span></button>
+        <button class="menu-card card-master" data-go="master"><span class="card-icon">👨🏻‍🏫</span><span class="card-label">Bertanya kepada Master</span><span class="card-sub">Tanya apa saja tentang pelajaran</span><span class="card-arrow">↗</span></button>
+      </div><footer class="home-footer">Dibuat untuk menemani perjalanan belajarmu <span>♡</span></footer>
+    </section>
+
+    <section id="notesView" class="view feature-view">
+      <div class="page-head"><button class="back-btn" data-go="home">← Kembali</button><div><span class="eyebrow">RUANG CATATAN</span><h2>Catatan Belajarku</h2><p>Simpan hal-hal penting yang kamu pelajari.</p></div></div>
+      <div class="notes-layout"><div class="panel note-editor"><div class="panel-title"><span class="panel-icon">✍️</span><div><h3>Catatan baru</h3><p>Tulis dan simpan catatanmu</p></div></div><label for="noteTitle">Judul catatan</label><input id="noteTitle" class="text-input" placeholder="Contoh: Momentum dan Impuls"><label for="noteBody">Isi catatan</label><textarea id="noteBody" class="text-area" rows="9" placeholder="Mulai tulis catatan pembelajaran kamu di sini..."></textarea><div class="editor-actions"><button class="btn btn-primary" id="saveNote">Simpan Catatan</button><button class="btn btn-light" id="clearNote">Bersihkan</button></div><div class="drive-row"><div><b>☁️ Google Drive</b><p id="driveStatus">Hubungkan untuk menyimpan catatan sebagai Google Docs.</p></div><button class="btn btn-outline" id="connectDrive">Hubungkan</button></div><button class="btn btn-drive" id="uploadDrive">↑ Simpan catatan ini ke Google Drive</button><p class="tiny-help">Catatan tersimpan di perangkat secara otomatis. Drive memerlukan konfigurasi Google OAuth.</p></div>
+      <aside class="panel saved-panel"><div class="panel-title"><span class="panel-icon">📒</span><div><h3>Catatan tersimpan</h3><p id="noteCount">0 catatan</p></div></div><input id="searchNotes" class="text-input search-input" placeholder="Cari catatan..." aria-label="Cari catatan"><div id="savedNotes" class="saved-list"><div class="empty-state">Belum ada catatan.<br>Catatan yang kamu simpan akan muncul di sini.</div></div></aside></div>
+    </section>
+
+    <section id="learnView" class="view feature-view">
+      <div class="page-head"><button class="back-btn" data-go="home">← Kembali</button><div><span class="eyebrow">AI LEARNING ROOM</span><h2>Belajar hal baru ✨</h2><p>Masukkan materi, Master bantu jelaskan dari dasar.</p></div></div>
+      <div class="learn-search panel"><div class="learn-illustration">📘</div><label for="learnPrompt">Materi apa yang ingin kamu pelajari?</label><textarea id="learnPrompt" class="text-area prompt-area" rows="2" placeholder="Masukkan judul materi pembelajaran kamu...\nContoh: Momentum dan Impuls kelas XI"></textarea><button class="btn btn-primary btn-wide" id="startLearn">Mulai Belajar <span>→</span></button><div class="suggestions"><span>Coba:</span><button data-topic="Momentum dan Impuls kelas XI">Momentum & Impuls</button><button data-topic="Hukum Newton">Hukum Newton</button><button data-topic="Matriks kelas XI">Matriks</button></div></div>
+      <div id="learnResult" class="panel result-panel hidden"><div class="result-top"><div><span class="eyebrow">MATERI PEMBELAJARAN</span><h3 id="learnResultTitle">Materi kamu</h3></div><button class="btn btn-light" id="saveLearn">＋ Simpan ke Catatan</button></div><div id="learnContent" class="markdown-content"></div><div class="result-bottom"><button class="btn btn-outline" id="quizFromLearn">Buat latihan soal dari materi ini</button><button class="btn btn-primary" id="askFromLearn">Tanyakan kepada Master</button></div></div>
+    </section>
+
+    <section id="quizView" class="view feature-view">
+      <div class="page-head"><button class="back-btn" data-go="home">← Kembali</button><div><span class="eyebrow">PRACTICE ZONE</span><h2>Latihan Soal 🎯</h2><p>Latihan sesuai materi dan level yang kamu pilih.</p></div></div>
+      <div id="quizSetup" class="panel quiz-setup"><div class="panel-title"><span class="panel-icon">🧠</span><div><h3>Buat latihanmu</h3><p>Kamu bisa menulis perintah dengan bahasamu sendiri.</p></div></div><label for="quizPrompt">Perintah membuat soal</label><textarea id="quizPrompt" class="text-area" rows="4" placeholder="Contoh: Buatkan 10 soal Pythagoras tingkat dasar, pilihan ganda, beserta pembahasan."></textarea><div class="settings-grid"><div><label for="quizSubject">Mata pelajaran (opsional)</label><input id="quizSubject" class="text-input" placeholder="Matematika"></div><div><label for="quizLevel">Tingkat kesulitan</label><select id="quizLevel" class="text-input"><option>Campuran</option><option>Mudah</option><option>Sedang</option><option>Sulit</option></select></div><div><label for="quizCount">Jumlah soal</label><select id="quizCount" class="text-input"><option>5</option><option selected>10</option><option>15</option><option>20</option></select></div><div><label for="quizType">Jenis soal</label><select id="quizType" class="text-input"><option>Pilihan ganda</option><option>Multi-select</option><option>Campuran</option><option>Uraian</option></select></div></div><button class="btn btn-primary btn-wide" id="makeQuiz">Buat Latihan Soal <span>→</span></button></div>
+      <div id="quizResult" class="panel result-panel hidden"><div class="quiz-top"><div><span class="eyebrow">KUIS KAMU</span><h3 id="quizTitle">Latihan Soal</h3></div><span id="quizProgress" class="mini-pill">0 / 0</span></div><div id="quizQuestions"></div><div class="quiz-controls"><button class="btn btn-light" id="resetQuiz">Buat latihan baru</button><button class="btn btn-primary" id="submitQuiz">Periksa Jawaban</button></div><div id="quizScore" class="score-box hidden"></div></div>
+    </section>
+
+    <section id="masterView" class="view feature-view chat-view">
+      <div class="page-head"><button class="back-btn" data-go="home">← Kembali</button><div><span class="eyebrow">PERSONAL AI TEACHER</span><h2>Bertanya kepada Master</h2><p>Guru virtual yang siap menemani belajarmu.</p></div></div>
+      <div class="chat-shell"><div class="chat-header"><div class="master-avatar">👨🏻‍🏫<span class="avatar-online"></span></div><div><b>Master</b><small><span class="online-dot"></span> Guru AI siap membantu</small></div><button id="clearChat" class="icon-btn chat-clear" title="Hapus percakapan">⌫</button></div><div class="mountain-bg"><div class="mountain m1"></div><div class="mountain m2"></div><div class="mountain m3"></div></div><div id="chatMessages" class="chat-messages"><div class="chat-date">Hari ini</div><div class="message master-message"><div class="bubble">Halo, selamat datang di ruang belajar! 👋<br>Aku Master, guru yang siap membantumu memahami pelajaran. Apa yang ingin kamu tanyakan hari ini?</div><span class="message-time">Master · sekarang</span></div></div><div class="chat-compose"><textarea id="chatInput" rows="1" placeholder="Tulis pesan untuk Master..."></textarea><button id="sendChat" class="send-btn" aria-label="Kirim pesan">➤</button></div><div class="chat-hint">Master adalah AI. Periksa kembali informasi penting untuk tugas sekolah.</div></div>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div><div id="busy" class="busy-overlay hidden"><div class="busy-card"><div class="loader"></div><b id="busyTitle">Master sedang berpikir...</b><span id="busyText">Sebentar ya, sedang menyiapkan jawaban.</span></div></div>
+  <script src="/app.js"></script>
+</body></html>
